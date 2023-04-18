@@ -1,0 +1,60 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <server>
+            <id>packagecloud.releases</id>
+            <password>${env.PCLOUD}</password>
+        </server>
+        <server>
+            <id>packagecloud.snapshots</id>
+            <password>${env.PCLOUD}</password>
+        </server>
+        <server>
+            <id>github</id>
+            <username>molefeq</username>
+            <password>${env.GITHUB}</password>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>release</id>
+            <repositories>
+                <repository>
+                    <id>Maven2 Repository</id>
+                    <url>https://repo1.maven.org/maven2/</url>
+                </repository>
+                <repository>
+                    <id>molefeq-release</id>
+                    <url>https://packagecloud.io/molefeq/release/maven2</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>molefeq-snapshot</id>
+                    <url>https://packagecloud.io/molefeq/snapshot/maven2</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>Maven2 Repository</id>
+                    <url>https://repo1.maven.org/maven2/</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>release</activeProfile>
+    </activeProfiles>
+</settings>

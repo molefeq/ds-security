@@ -37,12 +37,10 @@
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
-            <version>${jjwt.version}</version>
         </dependency>
         <dependency>
             <groupId>com.nimbusds</groupId>
             <artifactId>nimbus-jose-jwt</artifactId>
-            <version>${nimbus.jose.jwt.version}</version>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -60,12 +58,10 @@
         <dependency>
             <groupId>com.que.ads.ds</groupId>
             <artifactId>ds-common</artifactId>
-            <version>${ds.common.version}</version>
         </dependency>
         <dependency>
             <groupId>com.que.ads</groupId>
             <artifactId>ds-security-data</artifactId>
-            <version>${ds.security.data.version}</version>
         </dependency>
     </dependencies>
 
